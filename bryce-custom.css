@@ -141,18 +141,6 @@
         contrast(1.05)
         drop-shadow(0 0 4px #ff1738) !important;
 }
-/* ===== BLUE PS4 BODY ===== */
-
-.controller.ds4:not(.disconnected) {
-    filter:
-        brightness(0.85)
-        sepia(1)
-        saturate(5)
-        hue-rotate(175deg)
-        contrast(1.05)
-        drop-shadow(0 0 6px #ff1738)
-        drop-shadow(0 0 12px rgba(255, 23, 56, .45)) !important;
-}
 
 /* Keep controls more visible */
 .ds4 .stick,
@@ -164,15 +152,15 @@
 .ds4 .face {
     filter: brightness(1.5) saturate(1.4) !important;
 }
-/* ===== DEEP RED BODY ===== */
+/* ===== DEEP CRIMSON RED BODY ===== */
 
 .controller.ds4:not(.disconnected) {
     filter:
-        brightness(0.95)
+        brightness(0.85)
         sepia(1)
-        saturate(7)
-        hue-rotate(315deg)
-        contrast(1.12)
+        saturate(10)
+        hue-rotate(305deg)
+        contrast(1.15)
         drop-shadow(0 0 7px #ff1738)
         drop-shadow(0 0 14px rgba(255, 23, 56, .55)) !important;
 }
