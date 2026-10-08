@@ -1,68 +1,92 @@
 /* BRYCE PS4 CONTROLLER */
 
-/* Controller body — dark gray instead of pitch black */
+/* Main PS4 controller — dark charcoal + cleaner red glow */
 .controller.ds4:not(.disconnected) {
     filter:
-        brightness(0.72)
-        contrast(1.18)
+        brightness(0.82)
+        contrast(1.12)
         saturate(1.15)
-        drop-shadow(0 0 7px #ff1738)
-        drop-shadow(0 0 14px rgba(255, 0, 35, 0.55)) !important;
+        drop-shadow(0 0 5px #ff1738)
+        drop-shadow(0 0 10px rgba(255, 23, 56, 0.40)) !important;
 }
 
-/* Keep sticks visible */
+/* Make the controller shell dark gray instead of pitch black */
+.ds4 {
+    filter:
+        brightness(0.82)
+        contrast(1.10)
+        drop-shadow(0 0 5px #ff1738)
+        drop-shadow(0 0 10px rgba(255, 23, 56, 0.40)) !important;
+}
+
+/* Analog sticks — easier to see */
 .ds4 .stick {
-    filter: brightness(1.35) contrast(1.15) !important;
+    filter:
+        brightness(1.55)
+        contrast(1.25)
+        drop-shadow(0 0 3px #ff1738) !important;
 }
 
 /* D-pad */
 .ds4 .dpad {
-    filter: brightness(1.25) contrast(1.15) !important;
+    filter:
+        brightness(1.45)
+        contrast(1.20)
+        sepia(.25)
+        saturate(2) !important;
 }
 
-/* Face buttons */
-.ds4 .face {
-    filter: brightness(1.2) !important;
+/* Triggers */
+.ds4 .trigger {
+    filter:
+        brightness(1.20)
+        drop-shadow(0 0 3px #ff1738) !important;
 }
 
-/* Triggers and bumpers */
-.ds4 .trigger,
+/* Bumpers */
 .ds4 .bumper {
-    filter: brightness(1.15) !important;
+    filter:
+        brightness(1.20)
+        drop-shadow(0 0 2px #ff1738) !important;
+}
+
+/* Face buttons — keep their normal PlayStation colors visible */
+.ds4 .face {
+    filter:
+        brightness(1.45)
+        saturate(1.35)
+        contrast(1.10) !important;
 }
 
 /* Touchpad */
 .ds4 .touchpad {
     filter:
-        brightness(0.72)
-        sepia(1)
-        saturate(5)
-        hue-rotate(320deg) !important;
-}
-
-/* Stronger effect when something is pressed */
-.ds4 .pressed {
-    filter:
-        brightness(1.7)
-        drop-shadow(0 0 6px #ff1738) !important;
+        brightness(.75)
+        sepia(.45)
+        saturate(3)
+        hue-rotate(320deg)
+        drop-shadow(0 0 3px #ff1738) !important;
 }
 
 /* BRYCE */
-.controller.ds4:not(.disconnected)::after {
+.ds4::after {
     content: "BRYCE";
     position: absolute;
-    top: 24%;
     left: 50%;
-    transform: translate(-50%, -50%) skew(-10deg);
+    top: 27%;
+    transform: translate(-50%, -50%) skew(-8deg);
+    z-index: 9999;
+
     color: #ff1738;
     font-family: Impact, "Arial Black", sans-serif;
-    font-size: 32px;
+    font-size: 36px;
     font-style: italic;
     letter-spacing: 2px;
+
     text-shadow:
         2px 2px 0 #000,
         0 0 5px #ff1738,
-        0 0 10px #8b0015;
-    z-index: 9999;
+        0 0 10px rgba(255, 23, 56, .65);
+
     pointer-events: none;
 }
