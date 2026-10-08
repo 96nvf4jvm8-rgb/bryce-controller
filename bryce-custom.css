@@ -1,38 +1,57 @@
-/* BRYCE CONTROLLER */
+/* BRYCE PS4 CONTROLLER */
 
-.controller {
-    filter: brightness(0.55) contrast(1.35)
-            drop-shadow(0 0 12px #ff001e)
-            drop-shadow(0 0 22px #8b0015) !important;
+/* Controller body — dark gray instead of pitch black */
+.controller.ds4:not(.disconnected) {
+    filter:
+        brightness(0.72)
+        contrast(1.18)
+        saturate(1.15)
+        drop-shadow(0 0 7px #ff1738)
+        drop-shadow(0 0 14px rgba(255, 0, 35, 0.55)) !important;
 }
 
-/* Dark controller body */
-.controller:not(.disconnected) {
-    filter: brightness(0.42) contrast(1.5)
-            drop-shadow(0 0 10px #ff001e)
-            drop-shadow(0 0 22px #8b0015) !important;
+/* Keep sticks visible */
+.ds4 .stick {
+    filter: brightness(1.35) contrast(1.15) !important;
 }
 
-/* Make controls easier to see */
-.stick,
-.dpad,
-.button,
-.bumper,
-.trigger {
-    filter: brightness(1.5) contrast(1.25) !important;
+/* D-pad */
+.ds4 .dpad {
+    filter: brightness(1.25) contrast(1.15) !important;
 }
 
-/* Red glow when buttons are pressed */
-.pressed {
-    filter: brightness(2)
-            drop-shadow(0 0 7px #ff001e) !important;
+/* Face buttons */
+.ds4 .face {
+    filter: brightness(1.2) !important;
 }
 
-/* BRYCE text */
-.controller:not(.disconnected)::after {
+/* Triggers and bumpers */
+.ds4 .trigger,
+.ds4 .bumper {
+    filter: brightness(1.15) !important;
+}
+
+/* Touchpad */
+.ds4 .touchpad {
+    filter:
+        brightness(0.72)
+        sepia(1)
+        saturate(5)
+        hue-rotate(320deg) !important;
+}
+
+/* Stronger effect when something is pressed */
+.ds4 .pressed {
+    filter:
+        brightness(1.7)
+        drop-shadow(0 0 6px #ff1738) !important;
+}
+
+/* BRYCE */
+.controller.ds4:not(.disconnected)::after {
     content: "BRYCE";
     position: absolute;
-    top: 31%;
+    top: 24%;
     left: 50%;
     transform: translate(-50%, -50%) skew(-10deg);
     color: #ff1738;
@@ -42,8 +61,8 @@
     letter-spacing: 2px;
     text-shadow:
         2px 2px 0 #000,
-        0 0 5px #ff001e,
-        0 0 12px #ff001e;
+        0 0 5px #ff1738,
+        0 0 10px #8b0015;
     z-index: 9999;
     pointer-events: none;
 }
