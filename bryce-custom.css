@@ -1,0 +1,9 @@
+/* BRYCE CUSTOM SKIN TEST */
+
+.controller {
+    filter:
+        sepia(1)
+        saturate(8)
+        hue-rotate(315deg)
+        drop-shadow(0 0 15px red) !important;
+}
