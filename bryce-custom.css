@@ -152,25 +152,25 @@
 .ds4 .face {
     filter: brightness(1.5) saturate(1.4) !important;
 }
-/* ===== DEEP CRIMSON RED BODY ===== */
+/* ===== CHERRY RED BODY ===== */
 
 .controller.ds4:not(.disconnected) {
     filter:
-        brightness(0.85)
+        brightness(1.00)
         sepia(1)
-        saturate(10)
-        hue-rotate(305deg)
-        contrast(1.15)
-        drop-shadow(0 0 7px #ff1738)
-        drop-shadow(0 0 14px rgba(255, 23, 56, .55)) !important;
+        saturate(9)
+        hue-rotate(320deg)
+        contrast(1.10)
+        drop-shadow(0 0 7px #d2042d)
+        drop-shadow(0 0 15px rgba(210, 4, 45, 0.70)) !important;
 }
-/* ===== NEON RED STICK GLOW ===== */
+/* ===== CHERRY RED STICK GLOW ===== */
 
 .ds4 .stick {
     filter:
-        brightness(1.25)
-        drop-shadow(0 0 3px #ff174d)
-        drop-shadow(0 0 7px #ff174d)
-        drop-shadow(0 0 14px #ff174d)
-        drop-shadow(0 0 20px rgba(255, 23, 77, 0.8)) !important;
+        brightness(1.30)
+        drop-shadow(0 0 3px #d2042d)
+        drop-shadow(0 0 7px #d2042d)
+        drop-shadow(0 0 14px #d2042d)
+        drop-shadow(0 0 20px rgba(210, 4, 45, 0.80)) !important;
 }
