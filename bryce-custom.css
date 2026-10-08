@@ -164,14 +164,14 @@
 .ds4 .face {
     filter: brightness(1.5) saturate(1.4) !important;
 }
-/* ===== BRIGHTER DARK BLUE ===== */
+/* ===== STRONGER BLUE BODY ===== */
 
 .controller.ds4:not(.disconnected) {
     filter:
-        brightness(1.05)
+        brightness(1.15)
         sepia(1)
-        saturate(5.5)
-        hue-rotate(175deg)
+        saturate(9)
+        hue-rotate(165deg)
         contrast(1.05)
         drop-shadow(0 0 6px #ff1738)
         drop-shadow(0 0 12px rgba(255, 23, 56, .45)) !important;
