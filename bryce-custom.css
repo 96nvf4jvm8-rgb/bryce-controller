@@ -1,77 +1,49 @@
-/* ===== BRYCE BLACK + RED CONTROLLER ===== */
+/* BRYCE CONTROLLER */
 
-.controller.xbox:not(.disconnected) {
-    filter:
-        brightness(0.42)
-        contrast(1.35)
-        sepia(1)
-        saturate(6)
-        hue-rotate(315deg)
-        drop-shadow(0 0 8px #ff001e)
-        drop-shadow(0 0 16px rgba(255, 0, 30, 0.65)) !important;
+.controller {
+    filter: brightness(0.55) contrast(1.35)
+            drop-shadow(0 0 12px #ff001e)
+            drop-shadow(0 0 22px #8b0015) !important;
 }
 
-/* TRIGGERS */
-.controller.xbox:not(.disconnected) .trigger {
-    filter:
-        brightness(0.75)
-        saturate(8)
-        drop-shadow(0 0 5px #ff001e) !important;
+/* Dark controller body */
+.controller:not(.disconnected) {
+    filter: brightness(0.42) contrast(1.5)
+            drop-shadow(0 0 10px #ff001e)
+            drop-shadow(0 0 22px #8b0015) !important;
 }
 
-/* BUMPERS */
-.controller.xbox:not(.disconnected) .bumper {
-    filter:
-        brightness(0.7)
-        saturate(8)
-        drop-shadow(0 0 4px #ff001e) !important;
+/* Make controls easier to see */
+.stick,
+.dpad,
+.button,
+.bumper,
+.trigger {
+    filter: brightness(1.5) contrast(1.25) !important;
 }
 
-/* ANALOG STICKS */
-.controller.xbox:not(.disconnected) .stick {
-    filter:
-        brightness(0.75)
-        contrast(1.4)
-        saturate(8)
-        drop-shadow(0 0 6px #ff001e) !important;
+/* Red glow when buttons are pressed */
+.pressed {
+    filter: brightness(2)
+            drop-shadow(0 0 7px #ff001e) !important;
 }
 
-/* ABXY BUTTONS */
-.controller.xbox:not(.disconnected) .abxy .button {
-    filter:
-        brightness(0.9)
-        sepia(1)
-        saturate(10)
-        hue-rotate(315deg)
-        drop-shadow(0 0 5px #ff001e) !important;
-}
-
-/* D-PAD */
-.controller.xbox:not(.disconnected) .dpad {
-    filter:
-        brightness(0.65)
-        sepia(1)
-        saturate(8)
-        hue-rotate(315deg)
-        drop-shadow(0 0 5px #ff001e) !important;
-}
-
-/* CENTER BUTTON */
-.controller.xbox:not(.disconnected) .meta {
-    filter:
-        sepia(1)
-        saturate(10)
-        hue-rotate(315deg)
-        drop-shadow(0 0 6px #ff001e) !important;
-}
-
-/* STRONGER GLOW WHEN BUTTON IS PRESSED */
-.controller.xbox:not(.disconnected) .pressed {
-    filter:
-        brightness(1.5)
-        sepia(1)
-        saturate(12)
-        hue-rotate(315deg)
-        drop-shadow(0 0 6px #ff002b)
-        drop-shadow(0 0 12px #ff002b) !important;
+/* BRYCE text */
+.controller:not(.disconnected)::after {
+    content: "BRYCE";
+    position: absolute;
+    top: 31%;
+    left: 50%;
+    transform: translate(-50%, -50%) skew(-10deg);
+    color: #ff1738;
+    font-family: Impact, "Arial Black", sans-serif;
+    font-size: 32px;
+    font-style: italic;
+    letter-spacing: 2px;
+    text-shadow:
+        2px 2px 0 #000,
+        0 0 5px #ff001e,
+        0 0 12px #ff001e;
+    z-index: 9999;
+    pointer-events: none;
 }
