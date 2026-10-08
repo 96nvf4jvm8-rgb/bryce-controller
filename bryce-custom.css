@@ -1,9 +1,77 @@
-/* BRYCE CUSTOM SKIN TEST */
+/* ===== BRYCE BLACK + RED CONTROLLER ===== */
 
-.controller {
+.controller.xbox:not(.disconnected) {
     filter:
+        brightness(0.42)
+        contrast(1.35)
+        sepia(1)
+        saturate(6)
+        hue-rotate(315deg)
+        drop-shadow(0 0 8px #ff001e)
+        drop-shadow(0 0 16px rgba(255, 0, 30, 0.65)) !important;
+}
+
+/* TRIGGERS */
+.controller.xbox:not(.disconnected) .trigger {
+    filter:
+        brightness(0.75)
+        saturate(8)
+        drop-shadow(0 0 5px #ff001e) !important;
+}
+
+/* BUMPERS */
+.controller.xbox:not(.disconnected) .bumper {
+    filter:
+        brightness(0.7)
+        saturate(8)
+        drop-shadow(0 0 4px #ff001e) !important;
+}
+
+/* ANALOG STICKS */
+.controller.xbox:not(.disconnected) .stick {
+    filter:
+        brightness(0.75)
+        contrast(1.4)
+        saturate(8)
+        drop-shadow(0 0 6px #ff001e) !important;
+}
+
+/* ABXY BUTTONS */
+.controller.xbox:not(.disconnected) .abxy .button {
+    filter:
+        brightness(0.9)
+        sepia(1)
+        saturate(10)
+        hue-rotate(315deg)
+        drop-shadow(0 0 5px #ff001e) !important;
+}
+
+/* D-PAD */
+.controller.xbox:not(.disconnected) .dpad {
+    filter:
+        brightness(0.65)
         sepia(1)
         saturate(8)
         hue-rotate(315deg)
-        drop-shadow(0 0 15px red) !important;
+        drop-shadow(0 0 5px #ff001e) !important;
+}
+
+/* CENTER BUTTON */
+.controller.xbox:not(.disconnected) .meta {
+    filter:
+        sepia(1)
+        saturate(10)
+        hue-rotate(315deg)
+        drop-shadow(0 0 6px #ff001e) !important;
+}
+
+/* STRONGER GLOW WHEN BUTTON IS PRESSED */
+.controller.xbox:not(.disconnected) .pressed {
+    filter:
+        brightness(1.5)
+        sepia(1)
+        saturate(12)
+        hue-rotate(315deg)
+        drop-shadow(0 0 6px #ff002b)
+        drop-shadow(0 0 12px #ff002b) !important;
 }
