@@ -90,3 +90,54 @@
 
     pointer-events: none;
 }
+/* ===== VISIBILITY FIX ===== */
+
+/* Lighten the PS4 artwork without washing it out */
+.controller.ds4:not(.disconnected) {
+    filter:
+        brightness(1.35)
+        contrast(0.95)
+        drop-shadow(0 0 5px #ff1738)
+        drop-shadow(0 0 10px rgba(255, 23, 56, .45)) !important;
+}
+
+/* Make sticks much easier to see */
+.ds4 .stick {
+    filter:
+        brightness(2.4)
+        contrast(1.15)
+        drop-shadow(0 0 4px #ff1738) !important;
+}
+
+/* D-pad */
+.ds4 .dpad {
+    filter:
+        brightness(2.1)
+        contrast(1.1)
+        drop-shadow(0 0 3px #ff1738) !important;
+}
+
+/* Shoulder buttons */
+.ds4 .trigger,
+.ds4 .bumper {
+    filter:
+        brightness(1.8)
+        contrast(1.1)
+        drop-shadow(0 0 3px #ff1738) !important;
+}
+
+/* Face buttons */
+.ds4 .face {
+    filter:
+        brightness(1.8)
+        saturate(1.4)
+        contrast(1.05) !important;
+}
+
+/* Touchpad */
+.ds4 .touchpad {
+    filter:
+        brightness(1.6)
+        contrast(1.05)
+        drop-shadow(0 0 4px #ff1738) !important;
+}
